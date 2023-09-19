@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Apple Music </title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/descarga.jpg">
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="/img/apple.png" alt="logo" style="max-width: 20px; margin-top: 15px; position: absolute; margin-left: 27px;">
+            <h1 style="font-style: normal; font-weight: 400; font-size: 25px; line-height: 16px; margin-right: 100px;">Music</h1>
+        </div>
+        
+        <div class="secc1">
+            <input type="search" placeholder="Buscar" style="border: 1px solid white; border-radius: 3px; background-color: #202020; margin-left: 28px; height: 28px; color: white; width: 205px;">
+            <br>
+            <p style="margin-top: 30px; position: absolute; margin-left: 60px;"><img src="/img/Escuchar.png" alt="Escuchar" style="max-width: 55%; position: absolute; margin-left: -37px; margin-top: -7px; ">Escuchar</p>
+            <p style="margin-top: 65px; position: absolute; margin-left: 60px;"><img src="" alt="">Explorar</p>
+            <p style="margin-top: 100px; position: absolute; margin-left: 60px;"><img src="/img/Radio.png" alt="Radio" style="max-width: 110%; position: absolute; margin-left: -40px; margin-top: -10px; ">Radio</p> 
+        </div>
+
+        <div class="secc2">
+            <h6 style="margin-top: -20px; position: absolute; margin-left: 27px;"> Biblioteca</h6>
+            <p style="margin-top: 5px; position: absolute; margin-left: 60px;"><img src="/img/Recien Añadidas.png" alt="Recien_Añadidas" style="max-width: 30%; position: absolute; margin-left: -35px; margin-top: -7px; ">Recien añadidas</p>
+            <p style="margin-top: 40px; position: absolute; margin-left: 60px;"><img src="/img/Artistas.png" alt="Artistas" style="max-width: 65%; position: absolute; margin-left: -35px; margin-top: -7px; ">Artistas</p>
+            <p style="margin-top: 75px; position: absolute; margin-left: 60px;"><img src="/img/Albumes.png" alt="Albumes" style="max-width: 70%; position: absolute; margin-left: -40px; margin-top: -12px; ">Albumes</p>
+            <p style="margin-top: 110px; position: absolute; margin-left: 60px;"><img src="/img/Canciones.png" alt="Canciones" style="max-width: 55%; position: absolute; margin-left: -38px; margin-top: -12px; ">Canciones</p>
+            <p style="margin-top: 145px; position: absolute; margin-left: 60px;"><img src="/img/Para ti.png" alt="Para_Ti" style="max-width: 90%; position: absolute; margin-left: -38px; margin-top: -9px; ">Para ti</p>
+        </div>
+
+        <div class="secc3">
+            <h6 style="margin-top: 30px; position: absolute; margin-left: 27px;">Playlist</h6>
+            <p style="margin-top: 95px; position: absolute; margin-left: 60px;"><img src="" alt="">Todas las playlist</p>
+            <p style="margin-top: 130px; position: absolute; margin-left: 60px;"><img src="/img/Playlist.png" alt="Playlist1" style="max-width: 65%; position: absolute; margin-left: -34px; margin-top: -9px;">Playlist1</p>
+            <p style="margin-top: 160px; position: absolute; margin-left: 60px;"><img src="/img/Playlist.png" alt="Playlist2" style="max-width: 65%; position: absolute; margin-left: -34px; margin-top: -9px;">Playlist2</p>
+            <p style="margin-top: 195px; position: absolute; margin-left: 60px;"><img src="/img/Playlist.png" alt="Playlist1" style="max-width: 65%; position: absolute; margin-left: -34px; margin-top: -9px;">Playlist1</p>
+
+        </div>
+
+
+        <div class="secc4">
+            <h6 style="margin-top: 135px; position: absolute; margin-left: 65px; font-style: normal; font-weight: 400; font-size: 13px; line-height: 16px;">Abrir en Musica </h6>    
+        </div> 
+
+    </div>
+    
+    <div class="reproduccion">
+
+        <div class="next">
+        </div>
+
+        <div class="enReproduccion">
+            <div>
+                <img src="/img/apple.png" alt="apple" style="max-width: 6%; margin-left: 28%; margin-top: 3px;">
+            </div>
+        </div>
+
+        
+
+        <div class="iconoLogin">
+            
+            <div class="volumen">
+            </div>
+
+            <img src="/img/user.png" alt="user" style=" width: 6%; margin-left: 360px; margin-top: 12px;" onclick="prueba()">
+        </div>
+
+    </div>
+
+    <div class="contenedor"> 
+        
+        <div class="seccion1">
+            <div class="seccTitle">
+                <a href="#" id="mostrarModal"><img src="/img/play.png" alt="play" id="play" style="max-width: 100%; float: left; margin-right: 10px;"></a>
+                
+                <h1 > Download</h1>
+                <div id="miModal" class="modal">
+                    <div class="modal-contenido" style="width: 640px; height: 360px;">
+                        <span id="cerrarModal" class="cerrar">&times;</span>
+                        <div id="player"></div>
+                        
+                    </div>
+                </div>
+                <img src="/img/estrella.png" alt="estrella"  style="max-width: 2%; display: inline; margin-left: 70%;">
+                <img src="/img/MAS2.png" alt="MAS2"  style="max-width: 2%; display: inline;margin-left: 1%; ">
+            </div>
+                
+                <div class="ultimoLanza" style="margin-left: 45px;">
+                    <p style="font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px;">Último lanzamiento</p>
+                    <div class="album-cover" style="float: left; margin-right: 10px;"> <img src="/img/AlbumNata.png" alt="NataMontana" style="max-width: 125px; max-height: 125px; padding-right: 20px;"></div>
+                    
+                    <div class="album-info" >
+                      <h5>30 Junio 2023</h5>
+                      <p>Nata Montana</p>
+                      <p>7 Canciones</p>
+                      <button onclick="modalApi()" style="color: red;">+ Agregar</button>
+
+                        <div id="miModal1" class="modal1">
+                        <div class="modal-content1" style="width: 640px; height: 360px; ">
+                            <div id="respuestaApi"></div>
+                            <span class="close1" onclick="blockApi()">&times;</span>
+                        </div>
+                        </div>
+
+                    
+
+                    </div>
+                  </div>     
+                  
+                <div class="slider">
+                    <p style="position: absolute; top: 25%; margin-left: 10px;">Top Canciones</p>
+                    <div class="slide">
+                        
+
+                        <div class="column">
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="column">
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="column">
+                           
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="column">
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                            <div class="row">
+                                <hr>
+                                <img src="/img/power1.jpg" alt="power" style="width: 7%; float: left; margin-right: 10px; border-radius: 5px;">
+                                <p style="display: inline;">Power <br> MY beautiful Dark Twisted Fantasy-2010 <img src="/img/mas.png" alt="mas" style="width: 3%; display: inline; margin-left: 100px;"></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+        </div>
+        <div class="albumes">
+            <p style="font-style: normal; font-weight: 700; font-size: 15px; line-height: 22px; margin-left: 50px;">Álbumes</p>
+            <div class="sliderAlbum">
+                <div class="slide1">
+                    <img src="/img/Album.png" alt="Album">
+                    <p>The Life of Pablo <br> 2016</p>
+
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album1.png" alt="Album1">
+                    <p>My Beautiful Dark Twisted Fantasy <br> 2010</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album2.png" alt="Album2" style="max-height: 232px;">
+                    <p>808s & Heartbreak <br> 2008</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album3.png" alt="Album3" style="max-height: 232px;">
+                    <p>Gradaution <br> 2007</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album4.png" alt="Album4" style="max-height: 232px;">
+                    <p>Late Registration <br> 2005</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album5.png" alt="Album5">
+                    <p>The COllege Dropuot <br> 2004</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album6.png" alt="Album6">
+                    <p>ye <br> 2018</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album7.png" alt="Album7">
+                    <p>Yeezuz <br> 2013</p>
+                </div>
+                <div class="slide1">
+                    <img src="/img/Album8.png" alt="Album8">
+                    <p>Watch the Throne (Deluxe) <br> 2011</p>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="album" style="margin-left: 45px; margin-top: -50px;">
+                <p style="font-style: normal; font-weight: 700; font-size: 17px; line-height: 22px;">Sencillos y EP</p>
+                <img src="/img/Album9.png" alt="Album9" style="max-width: 235px; max-height: 235px; border-radius: 5px; ">
+                <p style="font-style: normal; font-weight: 400; font-size: 13px; line-height: 15px;">Views <br > 2016</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+
+        <div class="artSimilares">
+            <div>
+                <img src="/img/Kendrick Lamar.png" alt="Kendrick">
+                <p>Kendrick Lamar</p>
+            </div>
+            <div>
+                <img src="/img/Drake.png" alt="Drake">
+                <p>Drake</p>
+            </div>
+            <div>
+                <img src="/img/Travis Scott.png" alt="Travis">
+                <p>Travis Scott</p>
+            </div>
+            <div>
+                <img src="/img/A$AP Rocky.png" alt="A$AP">
+                <p>A$AP Rocky
+                </p>
+            </div>
+            <div>
+                <img src="/img/Tyler, The Creator.png" alt="Tyler">
+                <p>Tyler</p>
+            </div>
+            <div>
+                <img src="/img/JAY-Z.png" alt="JAY">
+                <p>JAY-Z</p>
+            </div>
+            <div>
+                <img src="/img/Kid Cudi.png" alt="Kid">
+                <p>Kid Cudi</p>
+            </div>
+        </div>
+        
+        <div class="derechos">
+            <p>Mexico&nbsp; | &nbsp;English (UK)</p>
+            <p>Copyright © Apple Inc. Todos los derechos reservados. <br> Terminos del servicio de internet | Apple Music y privacidad | Advertencia sobre cookies | Soporte técnico | Comentarios</p>
+            <p></p>
+        </div>
+    </footer>
+    
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+    
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+
+    <script>
+    
+
+    function mostrarModal() {
+    var modal = document.getElementById("miModal");
+    modal.style.display = "block";
+        
+    }
+
+    function cerrarModal() {
+    var modal = document.getElementById("miModal");
+    modal.style.display = "none";
+    }
+
+    var botonMostrarModal = document.getElementById("mostrarModal");
+    botonMostrarModal.addEventListener("click", mostrarModal);
+
+        function onYouTubeIframeAPIReady() {
+            var player = new YT.Player('player', {
+                height: '360',
+                width: '640',
+                videoId: 'nxscmAxFzvU', 
+                playerVars: {
+                    'autoplay': 0, 
+                    'controls': 1,
+                    'rel': 0, 
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            event.target.playVideo(); 
+        }
+
+        function onPlayerStateChange(event) {
+        }
+
+
+    function prueba() {
+        Swal.fire({
+        icon: 'error',
+        title:'No disponible',
+        showConfirmButton: false,
+        timer:1500,
+        })
+    }
+
+    function Agregar() {
+        Swal.fire({
+        icon: 'success',
+        title:'Agregado correctamente',
+        timer: 1500,
+        showConfirmButton: false,
+        })
+    }
+
+        
+    function modalApi() {
+    var modal = document.getElementById("miModal1");
+    modal.style.display = "block";
+    albumsApi();
+    }
+
+    function blockApi() {
+    var modal = document.getElementById("miModal1");
+    modal.style.display = "none";
+    }
+
+    function albumsApi() {
+    const respuestaApi = document.getElementById("respuestaApi");
+
+    fetch('https://jsonplaceholder.typicode.com/posts/10', {
+        method: 'PUT',
+        body: JSON.stringify({
+        Album: 'Nata Montana',
+        Canciones: '7',
+        Fecha_Salida: '30 Junio 2023',
+        Duracion: 40,
+        }),
+        headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+        .then((response) => response.json())
+        .then((json) => {
+        respuestaApi.innerHTML = JSON.stringify(json);
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        respuestaApi.innerHTML = 'Error al cargar los datos.';
+        });
+    }
+        
+
+        
+    </script> 
+</body>
+</html>
